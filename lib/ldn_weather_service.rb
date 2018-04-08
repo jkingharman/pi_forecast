@@ -24,16 +24,16 @@ class LondonWeatherService
   def request_forecast
     HTTParty.get(BASE_URL)
   rescue => err
-    Log.instance.info err
+    log.instance.info err
     :error
   end
 
   def get_icon_code(response)
     response['list'].first['weather'].first['icon']
   rescue => err
-    Log.instance.info err
+    log.instance.info err
     :error
   end
 
-  attr_reader :client
+  attr_reader :client, :log
 end
