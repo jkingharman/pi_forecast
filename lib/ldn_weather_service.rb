@@ -1,9 +1,12 @@
-require "httparty" # for now (will be extracted)
+require "httparty"
+require "dotenv" # for now (will be extracted)
 require_relative "log.rb"
 
+Dotenv.load
+
 class LondonWeatherService
-  OPEN_WEATHER_KEY = ENV['OPEN_WEATHER'].freeze
-  LONDON_ID = ENV['LONDON_ID'].freeze
+  OPEN_WEATHER_KEY = ENV["OPEN_WEATHER"].freeze
+  LONDON_ID = ENV["LONDON_ID"].freeze
   BASE_URL = "http://api.openweathermap.org/data/2.5/forecast?id=#{LONDON_ID}&APPID=#{OPEN_WEATHER_KEY}".freeze
 
   def initialize(client = HTTParty, log: Log)
