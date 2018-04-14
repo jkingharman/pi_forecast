@@ -1,5 +1,4 @@
 class ForecastInterface
-
   def initialize(
     display: PaPiRus::Display.new,
     image_processer: Magick::Image

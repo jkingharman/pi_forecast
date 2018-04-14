@@ -1,8 +1,3 @@
-require "httparty"
-require "dotenv"
-
-Dotenv.load
-
 class LondonWeatherService
   OPEN_WEATHER_KEY = ENV["OPEN_WEATHER"].freeze
   LONDON_ID = ENV["LONDON_ID"].freeze
