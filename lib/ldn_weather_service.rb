@@ -1,6 +1,5 @@
 require "httparty"
-require "dotenv" # for now (will be extracted)
-require_relative "log.rb"
+require "dotenv"
 
 Dotenv.load
 
