@@ -1,5 +1,5 @@
 class IconsFinder
-  ICON_DIR = '../assets/icons/'.freeze
+  ICON_DIR = './assets/icons/'.freeze
   CODES = %w[1d 2d 3d 4d 9d 10d 13d 50d error].freeze
 
   def initalize(log: log)
@@ -18,7 +18,7 @@ class IconsFinder
   def create_map
     icons = Dir.entries(ICON_DIR)
     remove_directories(icons)
-    icon_paths = get_icon_paths
+    icon_paths = get_icon_paths(icons)
     CODES.zip(icon_paths).to_h
   end
 
@@ -33,7 +33,7 @@ class IconsFinder
   def validate(map)
     if map.value?(nil)
       log.instance.info("There's an issue mapping")
-      :error
+      exit
     else
       map
     end

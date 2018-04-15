@@ -1,3 +1,5 @@
+Dotenv.load
+
 class LondonWeatherService
   OPEN_WEATHER_KEY = ENV["OPEN_WEATHER"].freeze
   LONDON_ID = ENV["LONDON_ID"].freeze
@@ -25,7 +27,7 @@ class LondonWeatherService
   def get_icon_code(response)
     response['list'].first['weather'].first['icon']
   rescue => err
-    log.instance.info err
+    log.instance.info response
     :error
   end
 
