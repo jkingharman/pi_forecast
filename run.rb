@@ -9,5 +9,3 @@ require_relative "./lib/forecast_interface"
 require_relative "./lib/icons_finder"
 require_relative "./lib/ldn_weather_service"
 require_relative "./lib/forecaster"
-
-Forecaster.new.call

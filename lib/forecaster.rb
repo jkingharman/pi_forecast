@@ -1,8 +1,7 @@
 class Forecaster
   def initialize(
     icons_finder: IconsFinder.new,
-    weather_service: LondonWeatherService.new,
-    interface: ForecastInterface.new
+    weather_service: LondonWeatherService.new
   )
   @icons_finder = icons_finder
   @weather_service = weather_service

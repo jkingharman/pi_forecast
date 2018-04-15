@@ -1,12 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    chronic (0.10.2)
     dotenv (2.2.1)
     httparty (0.16.2)
       multi_xml (>= 0.5.2)
     multi_xml (0.6.0)
     papirus (0.3.4)
     rmagick (2.16.0)
+    whenever (0.10.0)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -16,6 +19,7 @@ DEPENDENCIES
   httparty
   papirus
   rmagick
+  whenever
 
 BUNDLED WITH
    1.16.1
