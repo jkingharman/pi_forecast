@@ -1,8 +1,8 @@
 Dotenv.load
 
 class LondonWeatherService
-  OPEN_WEATHER_KEY = ENV["OPEN_WEATHER"].freeze
-  LONDON_ID = ENV["LONDON_ID"].freeze
+  OPEN_WEATHER_KEY = '011d3bba13efcf724c886b7185e2d0fa'.freeze
+  LONDON_ID = '2643743'.freeze
   BASE_URL = "http://api.openweathermap.org/data/2.5/forecast?id=#{LONDON_ID}&APPID=#{OPEN_WEATHER_KEY}".freeze
 
   def initialize(client = HTTParty, log: Log)
