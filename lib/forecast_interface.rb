@@ -1,6 +1,6 @@
 class ForecastInterface
   def initialize(
-    image_processer: Magick::Image
+    # image_processer: Magick::Image
   )
   @display = display
   @image_processer = image_processer
@@ -16,7 +16,7 @@ class ForecastInterface
 
   def write_to_screen(path)
     display = PaPiRus::Display.new
-    image = image_processer::read(path)
+    image =  Magick::Image::read(path)
     display.show(data: image.to_bit_stream(display.width, display.height))
   end
 end
