@@ -1,13 +1,5 @@
-require "httparty"
-require "papirus"
-require "rmagick"
-require "dotenv"
-require "logger"
 
-require_relative "./lib/log"
-require_relative "./lib/forecast_interface"
-require_relative "./lib/icons_finder"
-require_relative "./lib/ldn_weather_service"
-require_relative "./lib/forecaster"
+%w(httparty papirus papirus/rmagick dotenv logger).each { |gem| require gem }
+Dir.glob(File.join('./lib', '**', '*.rb'), &method(:require))
 
 Forecaster.new.call

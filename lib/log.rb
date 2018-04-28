@@ -8,6 +8,5 @@ class Log
 
     attr_reader :instance
   end
-
   Log.create
 end

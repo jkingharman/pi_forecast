@@ -12,7 +12,8 @@ class Forecaster
 
   def call
     icon_code = weather_service.call
-    path = icons_finder.call[icon_code]
+    path_map = icons_finder.call
+    path = path_map[icon_code]
     interface.display_icon(path)
   rescue => err
     log.instance.info err
