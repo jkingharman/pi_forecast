@@ -1,6 +1,6 @@
 class IconsFinder
   ICON_DIR = './assets/icons/'.freeze
-  CODES = %w[1n 2n 3n 4n 9n 10n 13n 50n error].freeze
+  CODES = %w[1d 2d 3d 4d 9d 10d 13d 50d error].freeze
 
   def initalize(log: log)
     @log = log
