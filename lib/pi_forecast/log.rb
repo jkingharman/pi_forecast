@@ -1,3 +1,5 @@
+require "logger"
+
 class Log
   class << self
     def create
