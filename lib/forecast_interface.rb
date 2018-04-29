@@ -16,7 +16,6 @@ class ForecastInterface
   attr_reader :display, :image_processer
 
   def write(path)
-    display = PaPiRus::Display.new
     image = Magick::Image::read(path).first
     display.show(data: image.to_bit_stream(display.width, display.height))
   end
