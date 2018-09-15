@@ -7,6 +7,7 @@ GEM
       multi_xml (>= 0.5.2)
     multi_xml (0.6.0)
     papirus (0.3.4)
+    rake (12.3.1)
     rmagick (2.16.0)
     whenever (0.10.0)
       chronic (>= 0.6.3)
@@ -18,8 +19,9 @@ DEPENDENCIES
   dotenv
   httparty
   papirus
+  rake
   rmagick
   whenever
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

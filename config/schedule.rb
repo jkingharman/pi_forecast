@@ -1,5 +1,3 @@
-require_relative "../run.rb"
-
 # Use this file to easily define all of your cron jobs.
 #
 # It's helpful, but not entirely necessary to understand cron before proceeding.
@@ -21,6 +19,9 @@ require_relative "../run.rb"
 
 # Learn more: http://github.com/javan/whenever
 
-every :day, at: "17:15pm" do
-  Forecaster.new.call
+set :output, '~/pi_forecast/log.log'
+
+every 1.minute do
+  rake 'cron:write_forecast'
+  puts "Forecast attempted at: #{Time.now}"
 end

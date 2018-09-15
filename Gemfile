@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-
-gem "httparty"
-gem "papirus"
-gem "rmagick"
-gem "papirus/rmagick"
-gem "dotenv"
-gem "whenever"
+gem 'dotenv'
+gem 'httparty'
+gem 'papirus'
+gem 'rake'
+gem 'rmagick'
+# gem 'rspec'
+gem 'whenever'
