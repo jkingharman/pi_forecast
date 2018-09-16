@@ -1,4 +1,4 @@
-# PiForecast #
+# Pi Forecast #
 
 I needed a kick to start using my Raspberry Pi - hence PiForecast.
 
