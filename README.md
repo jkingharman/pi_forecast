@@ -26,11 +26,12 @@ systemctl enable epd-fuse.service
 systemctl start epd-fuse
 ```
 
-Then checkout this repo, bundle install, get a public key from OpenWeatherMap and you should be good to go. You can run the tests with: ``` rspec ``` and the program with: ``` rake cron:write_forecast ``` You'll need to setup your crontab if you want to run it on a schedule.
+Then checkout this repo, ```bundle install```, get a public key from [OpenWeatherMap](https://openweathermap.org/) and you should be good to go. You can run the tests with: ``` rspec ``` and the program with: ``` rake cron:write_forecast ``` You'll need to setup your crontab if you want to run it on a schedule: ``` whenever --update-crontab ```
 
 ## Dependencies ##
 
 * HTTParty for the data fetch.
 * RMagick for image processing
 * Papirus for talking to my PaPiRus display.
+* Whenever for scheduling.
 * Rspec for tests.
