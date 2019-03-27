@@ -1,7 +1,5 @@
 # Pi Forecast #
 
-I needed a kick to start using my Raspberry Pi - hence PiForecast.
-
 The program displays London's weather forecast on my Pi's e-paper display. It fetches data from [OpenWeatherMap's](https://openweathermap.org/) API ([docs](https://openweathermap.org/current)),
 builds up an image of the weather and temperature and then writes to display. I've just got cron running the thing a few times a day right now.
 
